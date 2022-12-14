@@ -1,20 +1,21 @@
-import ERC_20_abi from '@/src/abis/ERC20.json'
+import ERC1155_abi from '@/src/abis/ERC1155.json'
+import ERC721_abi from '@/src/abis/ERC721.json'
 import { Chains } from '@/src/constants/config/types'
 
 export const contracts = Object.freeze({
-  DAI: {
+  ERC1155: {
     address: {
       // [Chains.mainnet]: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-      [Chains.goerli]: '0x5c221e77624690fff6dd741493d735a17716c26b',
+      [Chains.goerli]: '0x3934A00339490e1FdE31E4dD82f31451Dbbf4912',
     },
-    abi: ERC_20_abi,
+    abi: ERC1155_abi,
   },
-  USDC: {
+  ERC721: {
     address: {
       // [Chains.mainnet]: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
-      [Chains.goerli]: '0x78dEca24CBa286C0f8d56370f5406B48cFCE2f86',
+      [Chains.goerli]: '0x71034D6dF95752c9bfE651Da762BAb7ec4c748Aa',
     },
-    abi: ERC_20_abi,
+    abi: ERC721_abi,
   },
 })
 

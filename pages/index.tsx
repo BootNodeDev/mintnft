@@ -7,6 +7,7 @@ import { BaseCard } from '@/src/components/common/BaseCard'
 import { BaseParagraph } from '@/src/components/text/BaseParagraph'
 import { BaseTitle } from '@/src/components/text/BaseTitle'
 import { Code } from '@/src/components/text/Code'
+import MintNFT from '@/src/pagePartials/index/MintNFT'
 import { useWeb3ConnectedApp, useWeb3Connection } from '@/src/providers/web3ConnectionProvider'
 
 const Card = styled(BaseCard)`
@@ -27,13 +28,13 @@ const Home: NextPage = () => {
     <>
       <BaseTitle>{t('title')}</BaseTitle>
       <Card>
-        <BaseParagraph>
-          {t('mainMessage')} <Code>pages/index.tsx</Code>
-        </BaseParagraph>
         {isAppConnected && (
-          <BaseParagraph>
-            {t('walletAddress')}: <Address />
-          </BaseParagraph>
+          <>
+            <BaseParagraph>
+              {t('walletAddress')}: <Address />
+            </BaseParagraph>
+            <MintNFT />
+          </>
         )}
       </Card>
     </>

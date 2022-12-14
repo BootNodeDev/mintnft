@@ -93,7 +93,7 @@ export const Header: React.FC = (props) => {
             {isWalletConnected && isWalletNetworkSupported && <MainMenu />}
             {isWalletConnected && (
               <UserControls>
-                <NotificationsDropdown />
+                {/* <NotificationsDropdown /> */}
                 <SwitchThemeButton />
                 <UserDropdown />
               </UserControls>
