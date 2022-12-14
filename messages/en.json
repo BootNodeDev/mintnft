@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "BootNode - Frontend Starter Kit",
+    "description": "BootNode - Frontend Starter Kit"
+  },
+  "mainMenu": {
+    "home": "Home",
+    "examples": "Examples",
+    "about": "About"
+  },
+  "header": {
+    "buttonConnect": "Connect"
+  },
+  "userDropdown": {
+    "connected": "Connected",
+    "error": "Error",
+    "connect": "Connect",
+    "disconnect": "Log out",
+    "switchTo": "Switch network"
+  },
+  "notificationsDropdown": {
+    "title": "Notifications",
+    "expired": "Your rental",
+    "expired_2": "expired",
+    "rented": "Someone rented",
+    "bought": "Someone bought"
+  },
+  "modalSwitchNetwork": {
+    "title": "Choose a network"
+  },
+  "wrongNetwork": {
+    "text": "<underline>Switch to a valid network</underline> to use the app!"
+  },
+  "home": {
+    "title": "Welcome to BootNode-web3-Next.js!",
+    "mainMessage": "Get started by editing",
+    "walletAddress": "Your wallet address"
+  },
+  "about": {
+    "title": "About",
+    "mainMessage": "Get started by editing"
+  },
+  "cookiePolicy": {
+    "title": "Cookie Policy",
+    "mainMessage": "Get started by editing"
+  },
+  "components": {
+    "title": "Components",
+    "mainMessage": "Get started by editing"
+  },
+  "rightSidebarLayout": {
+    "title": "Alternative Layout v2",
+    "mainMessage": "Nothing should change in the sidebar / menu.",
+    "link": "Go back!"
+  }
+}
