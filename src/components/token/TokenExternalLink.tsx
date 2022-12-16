@@ -7,6 +7,12 @@ const Wrapper = styled.a`
   align-items: center;
   display: flex;
   justify-content: center;
+
+  &:hover {
+    .fill {
+      fill: ${({ theme: { colors } }) => colors.secondary};
+    }
+  }
 `
 
 export const TokenExternalLink: React.FC<{ address?: string }> = ({ address, ...restProps }) => {

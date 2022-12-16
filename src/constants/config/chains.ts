@@ -1,7 +1,7 @@
 import nullthrows from 'nullthrows'
 
 import { getProviderUrl } from '@/src/constants/config/rpc-providers'
-import { ChainConfig, Chains, ChainsValues, RPCProviders } from '@/src/constants/config/types'
+import { ChainConfig, Chains, ChainsValues } from '@/src/constants/config/types'
 
 // Default chain id from env var
 export const INITIAL_APP_CHAIN_ID = Number(

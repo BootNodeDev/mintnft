@@ -4,7 +4,7 @@ import { RadioButton } from '@/src/components/form/RadioButton'
 
 const Wrapper = styled.div<{ disabled?: boolean }>`
   align-items: center;
-  column-gap: 8px;
+  column-gap: 5px;
   display: grid;
   grid-template-columns: ${({ theme: { checkBox } }) => checkBox.dimensions} 1fr;
   max-width: fit-content;
@@ -17,6 +17,12 @@ const Wrapper = styled.div<{ disabled?: boolean }>`
       : css`
           cursor: pointer;
         `}
+
+  &:hover {
+    .label {
+      text-decoration: underline;
+    }
+  }
 `
 
 const Label = styled.span`
@@ -24,9 +30,11 @@ const Label = styled.span`
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.2;
-  position: relative;
-  top: 1px;
 `
+
+Label.defaultProps = {
+  className: 'label',
+}
 
 export const LabeledRadioButton: React.FC<{
   active?: boolean
