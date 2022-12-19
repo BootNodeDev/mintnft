@@ -13,11 +13,11 @@ const HomeLink = styled.a`
 
 const LogoSVG = styled(BaseLogoSVG)`
   cursor: pointer;
-  width: 55px;
+  width: 40px;
 `
 
 export const Logo: React.FC = (props) => (
-  <Link href="/" passHref>
+  <Link href="/" passHref title="Mint NFTs">
     <HomeLink {...props}>
       <LogoSVG />
     </HomeLink>
