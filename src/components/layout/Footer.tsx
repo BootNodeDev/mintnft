@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { InnerContainer as BaseInnerContainer } from '@/src/components/helpers/InnerContainer'
 import { BaseParagraph } from '@/src/components/text/BaseParagraph'
-import { useCookiesWarningContext } from '@/src/providers/cookiesWarningProvider'
+// import { useCookiesWarningContext } from '@/src/providers/cookiesWarningProvider'
 
 const Wrapper = styled.footer`
   color: ${({ theme }) => theme.colors.textColor};
@@ -39,18 +39,22 @@ const Item = styled.span`
 
 export const Footer: React.FC = (props) => {
   const year = new Date().getFullYear()
-  const { cookiesWarningEnabled, showCookiesWarning } = useCookiesWarningContext()
+  // const { cookiesWarningEnabled, showCookiesWarning } = useCookiesWarningContext()
 
   return (
     <Wrapper {...props}>
       <InnerContainer>
         <Paragraph>
-          Copyright © {year} • BootNode.dev • All Rights Reserved
-          {cookiesWarningEnabled && (
+          Copyright © {year} •{' '}
+          <a href="https://bootnode.dev" rel="noreferrer" target="_blank">
+            BootNode.dev
+          </a>{' '}
+          • All Rights Reserved
+          {/* {cookiesWarningEnabled && (
             <>
               &nbsp;- <Item onClick={showCookiesWarning}>Cookies</Item>
             </>
-          )}
+          )} */}
         </Paragraph>
       </InnerContainer>
     </Wrapper>
