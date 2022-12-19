@@ -30,6 +30,7 @@ const Label = styled.span`
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.2;
+  white-space: nowrap;
 `
 
 Label.defaultProps = {
