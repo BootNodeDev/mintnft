@@ -1,14 +1,9 @@
-import React, { ButtonHTMLAttributes, useCallback, useState } from 'react'
-import styled from 'styled-components'
+import React, { ButtonHTMLAttributes, useCallback } from 'react'
 
 import { ContractReceipt, ContractTransaction } from '@ethersproject/contracts'
 
 import { ButtonPrimary } from '@/src/components/buttons/Button'
 import useTransaction from '@/src/hooks/useTransaction'
-
-const Button = styled(ButtonPrimary)`
-  margin: auto 0;
-`
 
 interface TxButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onMined?: (r: ContractReceipt) => void
@@ -17,7 +12,7 @@ interface TxButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   tx: () => Promise<ContractTransaction>
 }
 
-const TxButton: React.FC<TxButtonProps> = ({
+export const TxButton: React.FC<TxButtonProps> = ({
   children,
   onFail,
   onMined,
@@ -41,11 +36,9 @@ const TxButton: React.FC<TxButtonProps> = ({
   }, [onFail, onMined, onSend, sendTx, tx])
 
   return (
-    <>
-      <Button onClick={txHandler} {...restProps}>
-        {children}
-      </Button>
-    </>
+    <ButtonPrimary onClick={txHandler} {...restProps}>
+      {children}
+    </ButtonPrimary>
   )
 }
 
