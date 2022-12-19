@@ -6,7 +6,7 @@ import { merge } from 'lodash'
 import { ThemeType } from '@/src/constants/types'
 import { usePersistedState } from '@/src/hooks/usePersistedState'
 import { common } from '@/src/theme/common'
-import { dark } from '@/src/theme/dark'
+// import { dark } from '@/src/theme/dark'
 import { GlobalStyles } from '@/src/theme/globalStyles'
 import { light } from '@/src/theme/light'
 
@@ -19,6 +19,8 @@ const ThemeContextProvider: React.FC = ({ children }) => {
     process.env.NEXT_PUBLIC_DEFAULT_THEME === ThemeType.light
       ? process.env.NEXT_PUBLIC_DEFAULT_THEME
       : ThemeType.light
+  // sorry, no dark theme this time...
+  const dark = light
 
   const [currentThemeName, setCurrentThemeName] = usePersistedState(
     'stored-theme-name',
@@ -37,7 +39,7 @@ const ThemeContextProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     setCurrentThemeJSON(isLightTheme ? merge({}, common, light) : merge({}, common, dark))
-  }, [isLightTheme])
+  }, [dark, isLightTheme])
 
   const values = {
     switchTheme,
