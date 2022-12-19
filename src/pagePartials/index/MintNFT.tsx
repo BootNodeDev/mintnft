@@ -48,8 +48,10 @@ const LabelWithNote = styled(Label)`
 const UseConnectedAddressButton = styled.button`
   background: none;
   border: none;
+  color: ${({ theme: { colors } }) => colors.textColor};
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1.2;
   text-decoration: underline;
 
@@ -98,7 +100,7 @@ const MintButton = styled(TxButton)`
 `
 
 const Note = styled(BaseParagraph)`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-style: italic;
   margin: 0 auto;
   max-width: 100%;

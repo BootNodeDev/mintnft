@@ -19,7 +19,7 @@ const Wrapper = styled(Dropdown)`
   }
 
   .dropdownItems {
-    width: 170px;
+    width: 190px;
   }
 `
 
@@ -31,8 +31,8 @@ const Item = styled.div`
   column-gap: 10px;
   cursor: pointer;
   display: flex;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 500;
   justify-content: space-between;
   line-height: 1.2;
   overflow: hidden;
@@ -43,6 +43,11 @@ const Item = styled.div`
 
   &:hover {
     background-color: ${({ theme: { dropdown } }) => dropdown.item.backgroundColorHover};
+    color: ${({ theme: { dropdown } }) => dropdown.item.colorHover};
+
+    path.fill {
+      fill: ${({ theme: { dropdown } }) => dropdown.item.colorHover};
+    }
   }
 
   &:last-child {

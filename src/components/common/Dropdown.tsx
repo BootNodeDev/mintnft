@@ -67,7 +67,7 @@ interface ItemsProps {
 const Items = styled.div<ItemsProps>`
   background-color: ${({ theme: { dropdown } }) => dropdown.background};
   border-radius: ${({ theme: { dropdown } }) => dropdown.borderRadius};
-  border: 1px solid ${({ theme: { dropdown } }) => dropdown.borderColor};
+  border: 2px solid ${({ theme: { dropdown } }) => dropdown.borderColor};
   box-shadow: ${({ theme: { dropdown } }) => dropdown.boxShadow};
   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   min-width: 90px;
@@ -125,6 +125,7 @@ export const DropdownItemCSS = css<ItemProps>`
   align-items: center;
   background-color: ${({ theme: { dropdown } }) => dropdown.item.backgroundColor};
   border-bottom: 1px solid ${({ theme: { dropdown } }) => dropdown.item.borderColor};
+  color: ${({ theme: { dropdown } }) => dropdown.item.color};
   cursor: pointer;
   display: flex;
   font-size: 1.3rem;
