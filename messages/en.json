@@ -1,12 +1,7 @@
 {
   "meta": {
-    "title": "BootNode - Frontend Starter Kit",
-    "description": "BootNode - Frontend Starter Kit"
-  },
-  "mainMenu": {
-    "home": "Home",
-    "examples": "Examples",
-    "about": "About"
+    "title": "Mint NFTs - By Bootnode",
+    "description": "Mint testnet NFTs. NFT and blockchain development made easy!"
   },
   "header": {
     "buttonConnect": "Connect"

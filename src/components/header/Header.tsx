@@ -4,10 +4,7 @@ import styled from 'styled-components'
 import { useTranslations } from 'next-intl'
 
 import { ButtonPrimary } from '@/src/components/buttons/Button'
-import { MobileMenuButton } from '@/src/components/buttons/MobileMenuButton'
 import { Logo as BaseLogo } from '@/src/components/common/Logo'
-import { NotificationsDropdown } from '@/src/components/header/NotificationsDropdown'
-import { SwitchThemeButton } from '@/src/components/header/SwitchThemeButton'
 import { UserDropdown } from '@/src/components/header/UserDropdown'
 import { ContainerPadding } from '@/src/components/helpers/ContainerPadding'
 import { MainMenu } from '@/src/components/navigation/MainMenu'
@@ -49,11 +46,7 @@ const Start = styled.div`
 `
 
 const Logo = styled(BaseLogo)`
-  display: none;
-
-  @media (min-width: ${({ theme }) => theme.breakPoints.tabletLandscapeStart}) {
-    display: flex;
-  }
+  display: flex;
 `
 
 const End = styled.div`
@@ -84,7 +77,6 @@ export const Header: React.FC = (props) => {
     <>
       <Wrapper {...props}>
         <InnerContainer>
-          <MobileMenuButton onClick={toggleMenu} />
           <Start>
             <Logo />
           </Start>
@@ -93,8 +85,6 @@ export const Header: React.FC = (props) => {
             {isWalletConnected && isWalletNetworkSupported && <MainMenu />}
             {isWalletConnected && (
               <UserControls>
-                {/* <NotificationsDropdown /> */}
-                <SwitchThemeButton />
                 <UserDropdown />
               </UserControls>
             )}

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import { useTranslations } from 'next-intl'
 
+import { ButtonPrimary } from '@/src/components/buttons/Button'
 import { Modal } from '@/src/components/common/Modal'
 import { chainsConfig } from '@/src/constants/config/chains'
 import { useWeb3Connection } from '@/src/providers/web3ConnectionProvider'
@@ -17,23 +18,8 @@ const NetworkButtons = styled.div`
   width: 100%;
 `
 
-const NetworkButton = styled.button`
-  background-color: transparent;
-  border: 1px solid ${({ theme: { colors } }) => colors.lightGreen};
-  border-radius: 3px;
-  color: ${({ theme: { colors } }) => colors.lightGreen};
-  cursor: pointer;
-  font-size: 1.5rem;
-  height: 30px;
+const NetworkButton = styled(ButtonPrimary)`
   width: 100%;
-
-  &:active {
-    opacity: 0.7;
-  }
-
-  &:hover {
-    border-color: ${({ theme: { colors } }) => colors.lighterGreen};
-  }
 `
 
 export const ModalSwitchNetwork: React.FC<{ onClose: () => void }> = ({

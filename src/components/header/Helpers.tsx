@@ -30,14 +30,6 @@ export const Dropdown = styled(BaseDropdown)`
   }
 
   .dropdownItems {
-    --border-radius: 4px;
-
-    background-color: ${({ theme: { colors } }) => colors.darkererGreen};
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border: none;
     padding: 0;
     top: 100%;
   }

@@ -3,11 +3,15 @@ import styled from 'styled-components'
 
 const Wrapper = styled.svg`
   .fill {
-    fill: ${({ theme }) => theme.header.color};
+    fill: ${({ theme: { colors } }) => colors.borderColor};
+  }
+
+  .fill2 {
+    fill: ${({ theme: { colors } }) => colors.secondary};
   }
 
   .stroke {
-    stroke: ${({ theme }) => theme.header.color};
+    stroke: ${({ theme: { colors } }) => colors.borderColor};
   }
 `
 
@@ -15,15 +19,15 @@ export const User: React.FC<HTMLAttributes<SVGElement>> = ({ className, ...restP
   <Wrapper
     className={`user ${className}`}
     height="30"
-    viewBox="0 0 30 30"
+    viewBox="-1 -1 32 32"
     width="30"
     xmlns="http://www.w3.org/2000/svg"
     {...restProps}
   >
     <g transform="translate(-1251 -10)">
-      <g className="stroke" fill="none" strokeWidth="1" transform="translate(1251 10)">
-        <circle cx="15" cy="15" r="15" stroke="none" />
-        <circle cx="15" cy="15" fill="none" r="14.5" />
+      <g transform="translate(1251 10)">
+        <circle className="fill2" cx="15" cy="15" r="15" stroke="none" />
+        <circle className="stroke" cx="15" cy="15" fill="none" r="14.5" strokeWidth="2" />
       </g>
       <path
         className="fill"
